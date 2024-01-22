@@ -13,21 +13,22 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = "TiCaM Synthetic"
-PROJECT_NAME_FULL: str = "TICaM Synthetic: A Time-of-flight In-car Cabin Monitoring Dataset"
+PROJECT_NAME: str = "TiCaM: Synthetic Images"
+PROJECT_NAME_FULL: str = "TICaM Synthetic: A Time-of-Flight In-Car Cabin Monitoring Dataset"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
 ##################################
 LICENSE: License = License.Unknown()
-APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Safety()]
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Safety(), Industry.Automotive()]
 CATEGORY: Category = Category.Safety()
 
 CV_TASKS: List[CVTask] = [
     CVTask.InstanceSegmentation(),
     CVTask.SemanticSegmentation(),
     CVTask.ObjectDetection(),
+    CVTask.MonocularDepthEstimation(),
 ]
 ANNOTATION_TYPES: List[AnnotationType] = [
     AnnotationType.InstanceSegmentation(),
@@ -54,23 +55,28 @@ GITHUB_URL: str = "https://github.com/dataset-ninja/ticam-synthetic"
 DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = "https://vizta-tof.kl.dfki.de/download/"
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
-CLASS2COLOR: Optional[Dict[str, List[str]]] = None
+CLASS2COLOR: Optional[Dict[str, List[str]]] = {
+    "child": [230, 25, 75],
+    "child seat": [60, 180, 75],
+    "everyday object": [255, 225, 25],
+    "infant": [0, 130, 200],
+    "infant seat": [245, 130, 48],
+    "person": [145, 30, 180],
+}
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
 # Use dict key to specify name for a button
-PAPER: Optional[Union[str, List[str], Dict[str, str]]] = "https://arxiv.org/pdf/2103.11719.pdf"
+PAPER: Optional[Union[str, List[str], Dict[str, str]]] = "https://arxiv.org/abs/2103.11719"
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
-REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {
-    "GitHub": "some_link_to_repo_if_exists"
-}
+REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = None
 
 CITATION_URL: Optional[str] = None
 AUTHORS: Optional[List[str]] = [
     "Jigyasa Katrolia",
-    "Dr. Jason Raphael Rambach",
-    "Dr. Bruno Mirbach",
-    "Prof. Dr. Didier Stricker",
+    "Jason Raphael Rambach",
+    "Bruno Mirbach",
+    "Didier Stricker",
 ]
 AUTHORS_CONTACTS: Optional[List[str]] = [
     "Jigyasa_Singh.Katrolia@dfki.de",
@@ -86,7 +92,7 @@ ORGANIZATION_URL: Optional[Union[str, List[str]]] = ["https://av.dfki.de/"]
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
 SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
-    "__PRETEXT__": "Additionally, images are grouped by ***im id***. Also every image contains information about its ***left seat***, ***right seat***. Explore it in supervisely labeling tool. Images labels have ***position*** tag"
+    "__PRETEXT__": "Additionally, images are grouped by ***im id***. Also every image contains information about its ***left seat***, ***right seat***. Images labels have ***position*** tag. Explore it in supervisely labeling tool"
 }
 TAGS: Optional[List[str]] = None
 
