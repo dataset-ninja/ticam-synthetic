@@ -1,8 +1,8 @@
-**TICaM Synthetic: A Time-of-Flight In-Car Cabin Monitoring Dataset** is a time-of-flight dataset of car in-cabin images providing means to test extensive car cabin monitoring systems based on deep learning methods. The authors provide a synthetic image dataset of car cabin images similar to the real dataset leveraging advanced simulation software’s capability to generate abundant data with little effort. This can be used to test domain adaptation between synthetic and real data for select classes. For both datasets the authors provide ground truth annotations for 2D and 3D object detection, as well as for instance segmentation.
+**TiCaM Synthectic Images: A Time-of-Flight In-Car Cabin Monitoring Dataset** is a time-of-flight dataset of car in-cabin images providing means to test extensive car cabin monitoring systems based on deep learning methods. The authors provide a synthetic image dataset of car cabin images similar to the real dataset leveraging advanced simulation software’s capability to generate abundant data with little effort. This can be used to test domain adaptation between synthetic and real data for select classes. For both datasets the authors provide ground truth annotations for 2D and 3D object detection, as well as for instance segmentation.
 
-Note, similar **TICaM Synthetic: A Time-of-Flight In-Car Cabin Monitoring Dataset** dataset is also available on the [DatasetNinja.com](https://datasetninja.com/):
+Note, similar **TiCaM Synthectic Images: A Time-of-Flight In-Car Cabin Monitoring Dataset** dataset is also available on the [DatasetNinja.com](https://datasetninja.com/):
 
-- [TICaM: A Time-of-Flight In-Car Cabin Monitoring Dataset](https://datasetninja.com/ticam)
+- [TiCaM Real Images: A Time-of-Flight In-Car Cabin Monitoring Dataset](https://datasetninja.com/ticam)
 
 ## Dataset description
 
