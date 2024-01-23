@@ -2,7 +2,7 @@
 
 Note, similar **TiCaM Synthectic Images: A Time-of-Flight In-Car Cabin Monitoring Dataset** dataset is also available on the [DatasetNinja.com](https://datasetninja.com/):
 
-- [TiCaM Real Images: A Time-of-Flight In-Car Cabin Monitoring Dataset](https://datasetninja.com/ticam)
+- [TiCaM Real Images: A Time-of-Flight In-Car Cabin Monitoring Dataset](https://datasetninja.com/ticam-real-images)
 
 ## Dataset description
 
