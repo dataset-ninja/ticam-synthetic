@@ -148,7 +148,7 @@ def convert_and_upload_supervisely_project(
         labels = []
         tags = []
 
-        group_tag = sly.Tag(group_tag_meta, value=get_file_name(image_path))
+        group_tag = sly.Tag(group_tag_meta, value=get_file_name(image_path)[36:])
         tags.append(group_tag)
 
         left_value = image_path.split("_")[-3]
