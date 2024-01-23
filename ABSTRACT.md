@@ -27,3 +27,15 @@ The authors recreated the actions participants were instructed to perform during
 <img src="https://github.com/dataset-ninja/ticam-synthetic/assets/120389559/5706bc09-6991-4bac-9370-6247be01d700" alt="image" width="800">
 
 <span style="font-size: smaller; font-style: italic;"> Different scenarios in the synthetic dataset.</span>
+
+##  Data Format
+
+* **Depth Z-image.** The depth image is undistorted with a pixel resolution of 512 × 512 pixels and captures a 105◦ × 105◦ FOV. The depth values are normalized to [1mm] resolution and clipped to a range of [0, 2550mm]. Invalid depth values are coded as ‘0’. Images are stored in 16bit PNG-format.
+
+* **IR Amplitude Image.** Undistorted IR images from the depth sensor are provided in the same format as the depth image above.
+
+* **RGB Image.** Undistorted color images are saved in PNG-format in 24bit depth. The synthetic RGB images have the same resolution and field of view as the corresponding depth images (512 × 512).
+
+* **2D bounding boxes.** Each 2D box in the synthetic dataset is represented by its class ID, the top-left and the bottom-right corners.
+
+* **Pixel segmentation masks.** For synthetic images the authors provide a single mask.
