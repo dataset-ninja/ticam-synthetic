@@ -94,7 +94,7 @@ ORGANIZATION_URL: Optional[Union[str, List[str]]] = ["https://av.dfki.de/"]
 SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
     "__PRETEXT__": "Additionally, images are grouped by ***im id***. Also every image contains information about its ***left seat***, ***right seat***. Images labels have ***position*** tag. Explore it in supervisely labeling tool"
 }
-TAGS: Optional[List[str]] = None
+TAGS: Optional[List[str]] = ['multi-view']
 
 
 SECTION_EXPLORE_CUSTOM_DATASETS: Optional[List[str]] = None
